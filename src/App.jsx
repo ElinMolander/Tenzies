@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import reactLogo from './assets/react.svg'
 import './index.css'
 import Die from './Die'
 import {nanoid} from 'nanoid'
@@ -10,7 +9,7 @@ import ice from './assets/ice.jpg'
 function App() {
   const [dice, setDice] = useState(allNewdice())
   const [tenzies,setTenzies] = useState(false)
-  const [counter, setCounter] = useState(0)
+  const [counter, setCounter] = useState(1)
   
   function allNewdice(){
     const newDice = []
@@ -51,7 +50,7 @@ function App() {
     if(tenzies){
       setDice(allNewdice())
       setTenzies(false)
-      setCounter(0)
+      setCounter(1)
     }
       setDice(prevDice => prevDice.map(die =>{
       return die.isHeld ? die : createNewDie()
