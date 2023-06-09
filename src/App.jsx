@@ -55,7 +55,7 @@ function App() {
       setDice(prevDice => prevDice.map(die =>{
       return die.isHeld ? die : createNewDie()
     }))
-    console.log(counter)
+    
   }
 
   function holdDice(id){
